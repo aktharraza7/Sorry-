@@ -1,0 +1,75 @@
+:root {
+    --bg-dark: #0a0e17;
+    --glass: rgba(255, 255, 255, 0.05);
+    --accent-purple: #8e44ad;
+    --accent-pink: #e91e63;
+    --gold: #d4af37;
+    --text: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
+
+body {
+    background: radial-gradient(circle at center, #1a1a2e, #0a0e17);
+    color: var(--text);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Glassmorphism Card Style */
+.glass-card {
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+/* Loading Screen */
+#loading-screen {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background: var(--bg-dark);
+}
+
+/* Custom Cursor */
+.cursor {
+    width: 8px; height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    position: fixed; pointer-events: none; z-index: 9999;
+}
+
+.cursor-follower {
+    width: 30px; height: 30px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    position: fixed; pointer-events: none; z-index: 9998;
+    transition: transform 0.1s ease;
+}
+
+/* UI Layouts */
+.nav-controls {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 2rem;
+    z-index: 100;
+}
+
+.page {
+    display: none;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.page.active { display: flex; }
