@@ -1,0 +1,9 @@
+{
+  "name": "A Sincere Reflection",
+  "short_name": "Reflection",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0a0e17",
+  "theme_color": "#8e44ad",
+  "icons": [{ "src": "assets/icons/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
